@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephane MBA's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo-holder">
+            <div class="logo">S</div>
+            <div class="logo-text">Stephane MBA</div>
+        </a>
+        <nav class="menu">
+            <ul class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </ul>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+    </header>
+    <main>
+        <section class="container profile">
+            <div class="profile-pic">
+                <img 
+                    src="./assets/profile-pic.png" 
+                    alt="My Profile Picture"
+                />
+            </div>
+            <div class="text-container">
+                <p class="text-p1">Hello, I'm</p>
+                <h1 class="title">Stéphane MBA</h1>
+                <p class="text-p2">
+                    Senior Android Engeneer
+                </p>
+                <div class="btn-container">
+                    <button 
+                        class="btn btn-color-2"
+                        onclick="window.open('./assets/resume-example.pdf')">
+                        Download CV
+                    </button>
+                    <button
+                        class="btn btn-color-1"
+                        onclick="location.href='./#contact'">
+                        Contact Info
+                    </button>
+                </div>
+                <div class="social-container">
+                    <img 
+                        src="./assets/linkedin.png" 
+                        alt="My LindedIn Profile"
+                        class="icon"
+                        onclick="location.href='https://www.linkedin.com/in/stéphane-darcy-simo-mba-483930b6/'"
+                    />
+                    <img 
+                        src="./assets/github.png" 
+                        alt="My Github Profile"
+                        class="icon"
+                        onclick="location.href='https://github.com/simbaste'"
+                    />
+                </div>
+            </div>
+        </section>
+        <section class="container logos">
+            <div class="marquee">
+                <div class="track">
+                    <img src="./imgs/html.png" alt="HTML" width="128"/>
+                    <img src="./imgs/css.png" alt="CSS" width="128"/>
+                    <img src="./imgs/javascript.png" alt="Javascript" width="128"/>
+                    <img src="./imgs/sass.png" alt="SASS" width="128"/>
+                    <img src="./imgs/react.png" alt="REACT" width="128"/>
+                    <img src="./imgs/nextjs.png" alt="NEXTJS" width="128"/>
+                    <img src="./imgs/azure.png" alt="AZURE" width="128"/>
+                    <img src="./imgs/vscode.png" alt="VSCODE" width="128"/>
+                    <img src="./imgs/python.png" alt="PYTHON" width="128"/>
+
+                    <img src="./imgs/html.png" alt="HTML" width="128"/>
+                    <img src="./imgs/css.png" alt="CSS" width="128"/>
+                    <img src="./imgs/javascript.png" alt="javascript" width="128"/>
+                    <img src="./imgs/sass.png" alt="SASS" width="128"/>
+                    <img src="./imgs/react.png" alt="REACT" width="128"/>
+                    <img src="./imgs/nextjs.png" alt="NEXTJS" width="128"/>
+                    <img src="./imgs/azure.png" alt="AZURE" width="128"/>
+                    <img src="./imgs/vscode.png" alt="VSCODE" width="128"/>
+                    <img src="./imgs/python.png" alt="PYTHON" width="128"/>
+                </div>
+            </div>
+        </section>
+        <section class="container about">
+            <p class="text-p1">Get to know more</p>
+            <h1 class="title">About Me</h1>
+            <div class="about-container">
+                <div class="about-pic-container">
+                    <img 
+                    src="./assets/about-pic.png" 
+                    alt="About Picture"
+                    class="about-pic">
+                </div>
+                <div class="about-details-container">
+                    <div class="experience-container">
+                        <div class="details-container">
+                            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+                            <h3>Experience</h3>
+                            <p>7+ years <br />Mobile Development</p>
+                        </div>
+                        <div class="details-container">
+                            <img src="./assets/education.png" alt="Education icon" class="icon" />
+                            <h3>Education</h3>
+                            <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
+                        </div>
+                    </div>
+                    <div class="text-container">
+                        <p>
+                            Développeur mobile expérimenté avec plus de 7 ans d'expertise en conception,
+                            développement et optimisation d’applications Android et iOS. Capable de mener
+                            des projets complexes et d'accompagner des équipes dans des missions techniques
+                            stratégiques, en particulier dans des environnements à forte exigence en sécurité,
+                            performance et scalabilité. Compétent en environnements natifs, cross-platform
+                            (Flutter, KMM), Web TV, avec des compétences confirmées en architecture
+                            logicielle, gestion de projet, et marketing produit.
+                        </p>
+                    </div>
+                    </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
