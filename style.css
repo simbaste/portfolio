@@ -13,10 +13,10 @@
     --base-100: #f1f1f1;
     --base-400: #555;
     --base-800: #000;
-    --yellow: #ffda4b;
-    --yellow-100: #fffbe6;
-    --yellow-400: #ffda4b;
-    --yellow-800: #8b6f00;
+    --gray: #a8a8a8; /* darker gray to replace yellow */
+    --gray-100: #f2f2f2; /* very light gray */
+    --gray-400: #a8a8a8; /* medium gray */
+    --gray-800: #4f4f4f; /* dark gray */
     --blue: #0a61ae;
     --blue-100: #e2f8ff;
     --blue-400: #61dafb;
@@ -216,15 +216,6 @@ header {
 
 /* SECTIONS */
 
-/* section {
-    padding-top: 2vh;
-    padding-bottom: 2vh;
-    height: 96vh;
-    margin: 0 10rem;
-    box-sizing: border-box;
-    min-height: fit-content;
-} */
-
 .container {
     max-width: 1440px;
     box-sizing: border-box;
@@ -238,6 +229,12 @@ header {
         padding-left: 30px;
         padding-right: 30px;
     }
+
+    .arrow {
+        position: absolute;
+        right: -5rem;
+        bottom: 2.5rem;
+    }
 }
 
 .profile {
@@ -246,16 +243,31 @@ header {
     gap: 5rem;
     height: 80vh;
 
-    .profile-pic {
+    .profile-pic-container {
         display: flex;
         height: 400px;
         width: 400px;
         margin: auto 0;
+
+        @media (max-width: 768px) {
+            height: 300px;
+            width: 300px;
+        }
+
+        .profile-pic {
+            height: 400px;
+            width: 400px;
+            @media (max-width: 768px) {
+                height: 300px;
+                width: 300px;
+            }
+        }
     }
 
     @media (max-width: 768px) {
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
     }
 }
 
@@ -306,7 +318,7 @@ header {
     .about-container {
         display: flex;
         gap: 4rem;
-        height: 80vh;
+        height: fit-content;
 
         @media (max-width: 1400px) {
             display: flex;
@@ -330,6 +342,14 @@ header {
 
             .about-pic {
                 border-radius: 2rem;
+                height: 400px;
+                margin: auto 0;
+
+                @media (max-width: 1400px) {
+                    width: 275px;
+                    height: 275px;
+                    margin: auto 2rem;
+                }
             }
         }
 
@@ -367,6 +387,85 @@ header {
         margin-top: 2rem;
     }
 }
+
+.experience {
+    .job {
+        display: grid;
+        gap: 30px;
+        padding-top: 70px;
+        grid-template-columns: repeat(3, 1fr); /* 3-column layout */
+
+        /* Responsive adjustment for tablet screens */
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr); /* 2-column layout on tablet screens */
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr; /* Single-column layout on smaller screens */
+        }
+
+        article {
+            background-color: var(--gray-100);
+            padding: 30px;
+            border-radius: 30px;
+        }
+
+        h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        div {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--base-800);
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        figure {
+            width: 100%;
+            padding-top: 56.25%;
+            overflow: hidden;
+            position: relative;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 3s ease;
+            }
+
+            figcaption {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+                color: var(--base-100);
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s ease;
+            }
+
+            &:hover {
+                figcaption {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                img {
+                    transform: scale(1.5);
+                }
+            }
+        }
+    }
+}
+
 
 /* ICONS */
 
