@@ -4,3 +4,7 @@ function toggleMenu() {
     menu.classList.toggle("open");
     icon.classList.toggle("open");
 }
+
+function comingSoon() {
+    alert("Live demo is coming soon")
+}

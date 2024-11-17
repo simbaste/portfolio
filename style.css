@@ -75,7 +75,6 @@ header {
     padding-right: 70px;
     display: flex;
     justify-content: space-between;
-    max-width: 1440px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
     .logo-holder {
@@ -241,7 +240,7 @@ header {
     display: flex;
     justify-content: center;
     gap: 5rem;
-    height: 80vh;
+    height: 70vh;
 
     .profile-pic-container {
         display: flex;
@@ -463,6 +462,133 @@ header {
                 }
             }
         }
+    }
+}
+
+.projects {
+    .works {
+        display: grid;
+        gap: 30px;
+        padding-top: 70px;
+        grid-template-columns: repeat(3, 1fr); /* 3-column layout */
+
+        /* Responsive adjustment for tablet screens */
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr); /* 2-column layout on tablet screens */
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr; /* Single-column layout on smaller screens */
+        }
+
+        article {
+            background-color: var(--gray-100);
+            border-color: var(--base-400);
+            border: var(--base-400) 0.1rem solid;
+            padding: 1.5rem;
+            border-radius: 2rem;
+            text-align: center;
+        }
+
+        .project-title {
+            margin: 1rem;
+            color: var(--base-800);
+            font-weight: 600;
+            font-size: 1.75rem;
+        }
+
+        div {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--base-800);
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        figure {
+            width: 100%;
+            padding-top: 90.25%;
+            overflow: hidden;
+            position: relative;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 3s ease;
+            }
+
+            figcaption {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+                color: var(--base-100);
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s ease;
+            }
+
+            &:hover {
+                figcaption {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                img {
+                    transform: scale(1.5);
+                }
+            }
+        }
+    }
+}
+
+.contact-info-upper-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    background: (250, 250, 250);
+    margin: 2rem auto;
+    padding: 0.5rem;
+}
+
+.contact {
+    .contact-info-upper-container {
+        display: flex;
+        justify-content: center;
+        border-radius: 2rem;
+        border: var(--base) 0.1rem solid;
+        border-color: var(--base-400);
+        background: (250, 250, 250);
+        width: fit-content;
+        padding: 0.5rem;
+    }
+    
+    .contact-info-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin: 1rem;
+    }
+    
+    .contact-info-container.p {
+        font-size: larger;
+    }
+    
+    .contact-icon {
+        cursor: default;
+    }
+    
+    .email-icon {
+        height: 2.5rem;
     }
 }
 
