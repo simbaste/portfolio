@@ -287,6 +287,8 @@ footer {
 /* SECTIONS */
 
 .container {
+    position: relative;
+    margin: 0 10rem;
     max-width: 1440px;
     box-sizing: border-box;
     min-height: fit-content;
@@ -304,6 +306,10 @@ footer {
         position: absolute;
         right: -5rem;
         bottom: 2.5rem;
+
+        @media (max-width: 600px) {
+            right: -2rem;
+        }
     }
 }
 
@@ -631,6 +637,10 @@ footer {
         width: fit-content;
         padding: 0.5rem;
 
+        @media (max-width: 600px) {
+            gap: 0.5rem;
+        }
+
         .contact-info-container {
             display: flex;
             align-items: center;
@@ -649,6 +659,7 @@ footer {
 
             @media (max-width: 600px) {
                 font-size: 0.7rem;
+                margin: 1rem 0.5rem;
 
                 .contact-icon {
                     height: 1.5rem;
