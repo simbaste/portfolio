@@ -68,6 +68,54 @@ a:hover {
     text-decoration-color: rgb(181, 181, 181);
 }
 
+/* Detail page */
+
+header {
+    /* background: var(--blue); */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    padding: 2rem;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: var(--base-800);
+    margin-bottom: 1rem;
+}
+
+.key-contributions ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+.image-gallery {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* figure {
+    max-width: 300px;
+} */
+
+/* img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px var(--gray-400);
+} */
+
+figcaption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--gray-800);
+    margin-top: 0.5rem;
+}
+
+
 header {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -537,6 +585,7 @@ footer {
                 img {
                     transform: scale(1.5);
                 }
+                cursor: pointer;
             }
         }
     }
